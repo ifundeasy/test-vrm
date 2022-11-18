@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>VRM on Browser</title>
+  <meta name="description" content="Track face and body rigs just your browser webcam!" />
+  <meta name="viewport"
+    content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="preview">
+    <video class="input_video" width="1280px" height="720px"></video>
+    <canvas class="guides"></canvas>
+  </div>
+  <!-- Basic Three.js -->
+  <script src="/node_modules/three/build/three.min.js"></script>
+  <!-- GLTF Loader for Three.js -->
+  <script src="/node_modules/three/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- Orbit Controls for Three.js -->
+  <script src="/node_modules/three/examples/js/controls/OrbitControls.js"></script>
+  <!-- VRM Loader for Three.js -->
+  <script src="/node_modules/@pixiv/three-vrm/lib/three-vrm.js"></script>
+  <!-- Mediapipe or Tensorflow.js -->
+  <script src="/node_modules/@mediapipe/holistic/holistic.js"></script>
+  <!-- Mediapipe Drawing Tools -->
+  <script src="/node_modules/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <!-- Mediapipe Camera Tools -->
+  <script src="/node_modules/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="/node_modules/kalidokit/dist/kalidokit.umd.js"></script>
+  <script src="script.js" type="module" defer></script>
+</body>
+
+</html>
