@@ -8,12 +8,13 @@
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --ignore-path .gitignore . --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "export NODE_ENV=production && node server.js",
+    "start:dev": "nodemon server.js",
+    "update": "ncu -u && npm install"
   },
   "repository": {
     "type": "git",
-    "url": "hhasdsd"
+    "url": "https://github.com/ifundeasy/test-vrm.git"
   },
   "keywords": [
     "VRM",
@@ -25,21 +26,24 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.2",
     "@mediapipe/camera_utils": "^0.3.1640029074",
     "@mediapipe/drawing_utils": "^0.3.1620248257",
     "@mediapipe/holistic": "^0.5.1635989137",
-    "@pixiv/three-vrm": "^0.6.7",
+    "@pixiv/three-vrm": "^1.0.5",
     "bluebird": "^3.7.2",
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "fastify": "^4.10.0",
     "kalidokit": "^1.1.5",
-    "three": "^0.133.0"
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "eslint": "^8.27.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.1.5",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "npm-check-updates": "^16.4.1"
   }
 }

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-import app from './app.js'
+import app from './src/app.js'
 
 dotenv.config()
 app.listen({ port: process.env.PORT || 3000 }, (err, address) => {
